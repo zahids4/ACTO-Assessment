@@ -18,6 +18,5 @@ struct User: Decodable {
         case name
         case userName = "username"
         case email
-    }
-    
+    }    
 }

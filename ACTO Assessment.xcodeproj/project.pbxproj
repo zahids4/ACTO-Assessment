@@ -16,6 +16,8 @@
 		30D97A7723764C2200D63484 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97A7623764C2200D63484 /* User.swift */; };
 		30D97A7C23764E8800D63484 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97A7B23764E8800D63484 /* ApiProvider.swift */; };
 		30D97A7E2376515100D63484 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97A7D2376515100D63484 /* UsersTableViewController.swift */; };
+		30D97A82237653FF00D63484 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97A81237653FF00D63484 /* UsersListViewModel.swift */; };
+		30D97A85237654F100D63484 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97A84237654F100D63484 /* UserViewModel.swift */; };
 		343B2FDCDFE7B58FD95E7926 /* Pods_ACTO_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B641EBA5F7E2CBD72B76314B /* Pods_ACTO_Assessment.framework */; };
 		7FFCEB63DB773D53133CEF6F /* Pods_ACTO_AssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ECA465C5E980589373703C /* Pods_ACTO_AssessmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		30D97A7623764C2200D63484 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		30D97A7B23764E8800D63484 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		30D97A7D2376515100D63484 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		30D97A81237653FF00D63484 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		30D97A84237654F100D63484 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		44D5DAD12C13C46BA8C43C49 /* Pods-ACTO Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTO Assessment.release.xcconfig"; path = "Target Support Files/Pods-ACTO Assessment/Pods-ACTO Assessment.release.xcconfig"; sourceTree = "<group>"; };
 		58A41F1F465B5D5CB1B76D6E /* Pods-ACTO AssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTO AssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-ACTO AssessmentTests/Pods-ACTO AssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B641EBA5F7E2CBD72B76314B /* Pods_ACTO_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACTO_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 				30D97A7823764C2600D63484 /* Models */,
 				30D97A802376525600D63484 /* Networking */,
 				30D97A7F2376524D00D63484 /* Views */,
+				30D97A83237654E000D63484 /* View Models */,
 			);
 			path = "ACTO Assessment";
 			sourceTree = "<group>";
@@ -139,6 +144,15 @@
 				30D97A7B23764E8800D63484 /* ApiProvider.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		30D97A83237654E000D63484 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				30D97A81237653FF00D63484 /* UsersListViewModel.swift */,
+				30D97A84237654F100D63484 /* UserViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		6A8A7815FE613D1238B8A6D2 /* Frameworks */ = {
@@ -330,9 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D97A5523764B6C00D63484 /* AppDelegate.swift in Sources */,
+				30D97A82237653FF00D63484 /* UsersListViewModel.swift in Sources */,
 				30D97A7E2376515100D63484 /* UsersTableViewController.swift in Sources */,
 				30D97A7C23764E8800D63484 /* ApiProvider.swift in Sources */,
 				30D97A5723764B6C00D63484 /* SceneDelegate.swift in Sources */,
+				30D97A85237654F100D63484 /* UserViewModel.swift in Sources */,
 				30D97A7723764C2200D63484 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
