@@ -9,7 +9,8 @@
 import Foundation
 
 protocol UserViewModelProtocol {
-    var name: String { get }
+    var fullName: String { get }
+    var userName: String { get }
 }
 
 class UserViewModel: UserViewModelProtocol {
@@ -19,7 +20,11 @@ class UserViewModel: UserViewModelProtocol {
         self.user = user
     }
     
-    var name: String {
+    var fullName: String {
         return user.name
+    }
+    
+    var userName: String {
+        return user.userName
     }
 }
