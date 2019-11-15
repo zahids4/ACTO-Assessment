@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Users-->
         <scene sceneID="cZB-dq-m7G">
             <objects>
                 <tableViewController id="VBt-2v-1sb" customClass="UsersTableViewController" customModule="ACTO_Assessment" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,7 +24,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="efG-mn-nuD">
                                             <rect key="frame" x="20" y="9.5" width="70" height="71"/>
-                                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="Gdd-dX-BgK"/>
                                                 <constraint firstAttribute="height" constant="70" id="gYN-9M-F5r"/>
@@ -65,7 +65,7 @@
                             <outlet property="delegate" destination="VBt-2v-1sb" id="854-s3-NKK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="h59-rK-iiN"/>
+                    <navigationItem key="navigationItem" title="Users" id="h59-rK-iiN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDV-Da-7Up" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
