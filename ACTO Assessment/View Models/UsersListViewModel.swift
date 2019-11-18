@@ -37,6 +37,9 @@ class UsersListViewModel: UsersListViewModelProtocol {
     }
     
     func fetchUsers() {
+        // I could also fetch this list in the main nav controller
+        // but I want to experiment with how it looked fetching the lists when needed vs
+        // loading them all at the start
         let setUsersAndRefresh = {
             self.allUsers = RealmManager.shared.allUsers.map({ UserViewModel($0) })
             self.tableViewDelegate?.onFetchComplete()

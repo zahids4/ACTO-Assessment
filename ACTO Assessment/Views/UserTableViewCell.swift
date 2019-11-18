@@ -11,9 +11,11 @@ import UIKit
 class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     func configureCell(with user: UserViewModelProtocol) {
         userNameLabel.text = user.userName
         fullNameLabel.text = user.fullName
+        emailLabel.text = user.email
     }
 }
