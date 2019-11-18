@@ -11,6 +11,7 @@ import UIKit
 class AlbumsTableViewController: UITableViewController {
     private var viewModel: AlbumsListViewModelProtocol!
     var selectedUserId: Int!
+    var selectedAlbumId: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,15 @@ class AlbumsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.totalAlbums
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            tableView.deselectRow(at: indexPath, animated: true)
+            let album = self.viewModel.album(at: indexPath.row)
+            self.selectedAlbumId = album.id
+            self.performSegue(withIdentifier: "showPhotosSegue", sender: self)
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath)
@@ -36,6 +45,13 @@ class AlbumsTableViewController: UITableViewController {
         cell.textLabel?.text = album.title
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPhotosSegue" {
+            let vc = segue.destination as! PhotosListTableViewController
+            vc.selectedAlbumId = selectedAlbumId
+        }
     }
 }
 

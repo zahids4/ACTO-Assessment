@@ -131,16 +131,16 @@
             </objects>
             <point key="canvasLocation" x="-1317" y="37"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Photos List Table View Controller-->
         <scene sceneID="UA1-fQ-PMY">
             <objects>
-                <tableViewController id="t51-Tr-Cdl" sceneMemberID="viewController">
+                <tableViewController id="t51-Tr-Cdl" customClass="PhotosListTableViewController" customModule="ACTO_Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KWF-k0-F1X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="albumCell" textLabel="QpI-uV-eJo" style="IBUITableViewCellStyleDefault" id="o2b-4o-Re6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="photoCell" textLabel="QpI-uV-eJo" style="IBUITableViewCellStyleDefault" id="o2b-4o-Re6">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2b-4o-Re6" id="PwR-fc-hZo">
