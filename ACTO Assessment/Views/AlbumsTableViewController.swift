@@ -39,7 +39,7 @@ class AlbumsTableViewController: UITableViewController {
     }
 }
 
-extension AlbumsTableViewController: AlbumsListViewModelDelegate {
+extension AlbumsTableViewController: ListViewModelDelegate {
     func onGetComplete() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

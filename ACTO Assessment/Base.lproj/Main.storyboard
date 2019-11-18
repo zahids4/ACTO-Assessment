@@ -107,6 +107,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="mK4-WP-EsG"/>
+                    <connections>
+                        <segue destination="t51-Tr-Cdl" kind="show" identifier="showPhotosSegue" id="wls-rF-KTD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlh-eU-Qb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,6 +130,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vue-uK-mnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1317" y="37"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="UA1-fQ-PMY">
+            <objects>
+                <tableViewController id="t51-Tr-Cdl" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KWF-k0-F1X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="albumCell" textLabel="QpI-uV-eJo" style="IBUITableViewCellStyleDefault" id="o2b-4o-Re6">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2b-4o-Re6" id="PwR-fc-hZo">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QpI-uV-eJo">
+                                            <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="t51-Tr-Cdl" id="tGS-Q5-ZIH"/>
+                            <outlet property="delegate" destination="t51-Tr-Cdl" id="IHQ-JM-0gi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="iRV-p9-ZeW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waT-Xf-UDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="37"/>
         </scene>
     </scenes>
     <resources>

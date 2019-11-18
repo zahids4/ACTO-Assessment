@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AlbumsListViewModelDelegate: class {
+protocol ListViewModelDelegate: class {
     func onGetComplete()
 }
 
@@ -19,11 +19,11 @@ protocol AlbumsListViewModelProtocol {
 }
 
 class AlbumsListViewModel: AlbumsListViewModelProtocol {
-    private weak var tableViewDelegate: AlbumsListViewModelDelegate?
+    private weak var tableViewDelegate: ListViewModelDelegate?
     
     private var allAlbums: [AlbumViewModelProtocol] = []
     
-    init(delegate: AlbumsListViewModelDelegate) {
+    init(delegate: ListViewModelDelegate) {
         self.tableViewDelegate = delegate
     }
     
