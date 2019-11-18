@@ -21,6 +21,13 @@
 		30D97A8723765D6600D63484 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97A8623765D6600D63484 /* UserTableViewCell.swift */; };
 		30FB6DC5237F26BD00C0EFC3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DC4237F26BD00C0EFC3 /* RealmManager.swift */; };
 		30FB6DC8237F274F00C0EFC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DC7237F274F00C0EFC3 /* NetworkManager.swift */; };
+		30FB6DCA2382F3D900C0EFC3 /* MainNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DC92382F3D900C0EFC3 /* MainNavViewController.swift */; };
+		30FB6DCC2382F48800C0EFC3 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DCB2382F48800C0EFC3 /* NavigationViewModel.swift */; };
+		30FB6DCE2382F50F00C0EFC3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DCD2382F50F00C0EFC3 /* Album.swift */; };
+		30FB6DD02382F7EF00C0EFC3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DCF2382F7EF00C0EFC3 /* Photo.swift */; };
+		30FB6DD22382FA0800C0EFC3 /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DD12382FA0800C0EFC3 /* AlbumsTableViewController.swift */; };
+		30FB6DD42382FA4C00C0EFC3 /* AlbumsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DD32382FA4C00C0EFC3 /* AlbumsListViewModel.swift */; };
+		30FB6DD62382FB0800C0EFC3 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DD52382FB0800C0EFC3 /* AlbumViewModel.swift */; };
 		343B2FDCDFE7B58FD95E7926 /* Pods_ACTO_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B641EBA5F7E2CBD72B76314B /* Pods_ACTO_Assessment.framework */; };
 		7FFCEB63DB773D53133CEF6F /* Pods_ACTO_AssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ECA465C5E980589373703C /* Pods_ACTO_AssessmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +62,13 @@
 		30D97A8623765D6600D63484 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		30FB6DC4237F26BD00C0EFC3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		30FB6DC7237F274F00C0EFC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		30FB6DC92382F3D900C0EFC3 /* MainNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewController.swift; sourceTree = "<group>"; };
+		30FB6DCB2382F48800C0EFC3 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		30FB6DCD2382F50F00C0EFC3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		30FB6DCF2382F7EF00C0EFC3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		30FB6DD12382FA0800C0EFC3 /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
+		30FB6DD32382FA4C00C0EFC3 /* AlbumsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewModel.swift; sourceTree = "<group>"; };
+		30FB6DD52382FB0800C0EFC3 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		44D5DAD12C13C46BA8C43C49 /* Pods-ACTO Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTO Assessment.release.xcconfig"; path = "Target Support Files/Pods-ACTO Assessment/Pods-ACTO Assessment.release.xcconfig"; sourceTree = "<group>"; };
 		58A41F1F465B5D5CB1B76D6E /* Pods-ACTO AssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTO AssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-ACTO AssessmentTests/Pods-ACTO AssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B641EBA5F7E2CBD72B76314B /* Pods_ACTO_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACTO_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				30D97A7623764C2200D63484 /* User.swift */,
+				30FB6DCD2382F50F00C0EFC3 /* Album.swift */,
+				30FB6DCF2382F7EF00C0EFC3 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +158,8 @@
 			children = (
 				30D97A7D2376515100D63484 /* UsersTableViewController.swift */,
 				30D97A8623765D6600D63484 /* UserTableViewCell.swift */,
+				30FB6DC92382F3D900C0EFC3 /* MainNavViewController.swift */,
+				30FB6DD12382FA0800C0EFC3 /* AlbumsTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +177,9 @@
 			children = (
 				30D97A81237653FF00D63484 /* UsersListViewModel.swift */,
 				30D97A84237654F100D63484 /* UserViewModel.swift */,
+				30FB6DCB2382F48800C0EFC3 /* NavigationViewModel.swift */,
+				30FB6DD32382FA4C00C0EFC3 /* AlbumsListViewModel.swift */,
+				30FB6DD52382FB0800C0EFC3 /* AlbumViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -360,8 +381,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FB6DD42382FA4C00C0EFC3 /* AlbumsListViewModel.swift in Sources */,
+				30FB6DD02382F7EF00C0EFC3 /* Photo.swift in Sources */,
+				30FB6DCE2382F50F00C0EFC3 /* Album.swift in Sources */,
+				30FB6DCC2382F48800C0EFC3 /* NavigationViewModel.swift in Sources */,
 				30D97A5523764B6C00D63484 /* AppDelegate.swift in Sources */,
+				30FB6DD22382FA0800C0EFC3 /* AlbumsTableViewController.swift in Sources */,
 				30D97A82237653FF00D63484 /* UsersListViewModel.swift in Sources */,
+				30FB6DCA2382F3D900C0EFC3 /* MainNavViewController.swift in Sources */,
+				30FB6DD62382FB0800C0EFC3 /* AlbumViewModel.swift in Sources */,
 				30FB6DC8237F274F00C0EFC3 /* NetworkManager.swift in Sources */,
 				30D97A7E2376515100D63484 /* UsersTableViewController.swift in Sources */,
 				30D97A7C23764E8800D63484 /* ApiProvider.swift in Sources */,

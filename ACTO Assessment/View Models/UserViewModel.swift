@@ -11,6 +11,7 @@ import Foundation
 protocol UserViewModelProtocol {
     var fullName: String { get }
     var userName: String { get }
+    var id: Int { get }
 }
 
 class UserViewModel: UserViewModelProtocol {
@@ -26,5 +27,9 @@ class UserViewModel: UserViewModelProtocol {
     
     var userName: String {
         return user.userName
+    }
+    
+    var id: Int {
+        return user.id
     }
 }

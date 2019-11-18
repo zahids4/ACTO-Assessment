@@ -66,15 +66,56 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="h59-rK-iiN"/>
+                    <connections>
+                        <segue destination="6IP-xv-ZOE" kind="show" identifier="showAlbumsSegue" id="qJI-gY-5JV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDV-Da-7Up" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-404.34782608695656" y="36.830357142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Albums Table View Controller-->
+        <scene sceneID="gV9-71-k8E">
+            <objects>
+                <tableViewController id="6IP-xv-ZOE" customClass="AlbumsTableViewController" customModule="ACTO_Assessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gfo-LR-Phw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="albumCell" textLabel="9Nn-QD-PBc" style="IBUITableViewCellStyleDefault" id="BdP-eh-Dnu">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BdP-eh-Dnu" id="cdU-gS-f1A">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Nn-QD-PBc">
+                                            <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6IP-xv-ZOE" id="b2h-bS-vtO"/>
+                            <outlet property="delegate" destination="6IP-xv-ZOE" id="jIg-fX-3pW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mK4-WP-EsG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mlh-eU-Qb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="37"/>
+        </scene>
+        <!--Main Nav View Controller-->
         <scene sceneID="utq-gw-lpU">
             <objects>
-                <navigationController id="h0m-Nl-UY8" sceneMemberID="viewController">
+                <navigationController id="h0m-Nl-UY8" customClass="MainNavViewController" customModule="ACTO_Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H51-Sq-glF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

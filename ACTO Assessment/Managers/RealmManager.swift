@@ -25,6 +25,26 @@ class RealmManager {
         closure()
     }
     
+    func saveFetchedAlbums(_ albums: [Album]) {
+        let realm = try! Realm()
+        let listOfAlbums = List<Album>()
+        albums.forEach({ listOfAlbums.append($0) })
+        
+        try! realm.write {
+            realm.add(listOfAlbums, update: .modified)
+        }
+    }
+    
+    func saveFetchedPhotos(_ photos: [Photo]) {
+        let realm = try! Realm()
+        let listOfPhotos = List<Photo>()
+        photos.forEach({ listOfPhotos.append($0) })
+        
+        try! realm.write {
+            realm.add(listOfPhotos, update: .modified)
+        }
+    }
+    
     func deleteAllUsers() {
         let realm = try! Realm()
         try! realm.write {
@@ -32,10 +52,19 @@ class RealmManager {
         }
     }
 
-    
     var allUsers: Results<User> {
         let realm = try! Realm()
         return realm.objects(User.self)
+    }
+    
+    var allAlbums: Results<Album> {
+        let realm = try! Realm()
+        return realm.objects(Album.self)
+    }
+    
+    var allPhotos: Results<Photo> {
+        let realm = try! Realm()
+        return realm.objects(Photo.self)
     }
 }
 

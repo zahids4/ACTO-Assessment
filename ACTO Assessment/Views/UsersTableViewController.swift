@@ -10,7 +10,8 @@ import UIKit
 
 class UsersTableViewController: UITableViewController {
     private var viewModel: UsersListViewModelProtocol!
-
+    var selectedUserId: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = UsersListViewModel(delegate: self)
@@ -31,6 +32,9 @@ class UsersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DispatchQueue.main.async {
             tableView.deselectRow(at: indexPath, animated: true)
+            let user = self.viewModel.user(at: indexPath.row)
+            self.selectedUserId = user.id
+            self.performSegue(withIdentifier: "showAlbumsSegue", sender: self)
         }
     }
     
@@ -41,6 +45,14 @@ class UsersTableViewController: UITableViewController {
         cell.configureCell(with: user)
 
         return cell
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAlbumsSegue" {
+            let vc = segue.destination as! AlbumsTableViewController
+            vc.selectedUserId = selectedUserId
+        }
     }
     
 }

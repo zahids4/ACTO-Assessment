@@ -37,11 +37,22 @@ class UsersListViewModel: UsersListViewModelProtocol {
     }
     
     func fetchUsers() {
+        let setUsersAndRefresh = {
+            self.allUsers = RealmManager.shared.allUsers.map({ UserViewModel($0) })
+            self.tableViewDelegate?.onFetchComplete()
+        }
+        
+        guard NetworkManager.shared.isConnectedToInternet else {
+            setUsersAndRefresh()
+            return
+        }
+        
         ApiProvider.shared.fetchUsers() { result in
             switch result {
             case .success(let users):
-                self.allUsers = users.map({ UserViewModel($0) })
-                self.tableViewDelegate?.onFetchComplete()
+                RealmManager.shared.saveFetchedUsers(users) {
+                    setUsersAndRefresh()
+                }
             case .failure(let error):
                 print(error)
                 self.tableViewDelegate?.onFetchFail()
