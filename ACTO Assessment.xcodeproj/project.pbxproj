@@ -32,6 +32,7 @@
 		30FB6DDA2382FE8A00C0EFC3 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DD92382FE8A00C0EFC3 /* PhotoViewModel.swift */; };
 		30FB6DDC2382FFC800C0EFC3 /* PhotosListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DDB2382FFC800C0EFC3 /* PhotosListTableViewController.swift */; };
 		30FB6DDE238301DF00C0EFC3 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DDD238301DF00C0EFC3 /* PhotoTableViewCell.swift */; };
+		30FB6DE0238302D900C0EFC3 /* ImageDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FB6DDF238302D900C0EFC3 /* ImageDownloadOperation.swift */; };
 		343B2FDCDFE7B58FD95E7926 /* Pods_ACTO_Assessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B641EBA5F7E2CBD72B76314B /* Pods_ACTO_Assessment.framework */; };
 		7FFCEB63DB773D53133CEF6F /* Pods_ACTO_AssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ECA465C5E980589373703C /* Pods_ACTO_AssessmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		30FB6DD92382FE8A00C0EFC3 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		30FB6DDB2382FFC800C0EFC3 /* PhotosListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListTableViewController.swift; sourceTree = "<group>"; };
 		30FB6DDD238301DF00C0EFC3 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		30FB6DDF238302D900C0EFC3 /* ImageDownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadOperation.swift; sourceTree = "<group>"; };
 		44D5DAD12C13C46BA8C43C49 /* Pods-ACTO Assessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTO Assessment.release.xcconfig"; path = "Target Support Files/Pods-ACTO Assessment/Pods-ACTO Assessment.release.xcconfig"; sourceTree = "<group>"; };
 		58A41F1F465B5D5CB1B76D6E /* Pods-ACTO AssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTO AssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-ACTO AssessmentTests/Pods-ACTO AssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B641EBA5F7E2CBD72B76314B /* Pods_ACTO_Assessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACTO_Assessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				30D97A7B23764E8800D63484 /* ApiProvider.swift */,
+				30FB6DDF238302D900C0EFC3 /* ImageDownloadOperation.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				30FB6DCE2382F50F00C0EFC3 /* Album.swift in Sources */,
 				30FB6DCC2382F48800C0EFC3 /* NavigationViewModel.swift in Sources */,
 				30D97A5523764B6C00D63484 /* AppDelegate.swift in Sources */,
+				30FB6DE0238302D900C0EFC3 /* ImageDownloadOperation.swift in Sources */,
 				30FB6DD82382FE6700C0EFC3 /* PhotosListViewModel.swift in Sources */,
 				30FB6DD22382FA0800C0EFC3 /* AlbumsTableViewController.swift in Sources */,
 				30D97A82237653FF00D63484 /* UsersListViewModel.swift in Sources */,

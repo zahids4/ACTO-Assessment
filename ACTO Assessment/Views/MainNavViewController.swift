@@ -13,7 +13,9 @@ class MainNavViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchAlbums()
-        viewModel.fetchPhotos()
+        DispatchQueue.global(qos: .userInteractive).async {
+            self.viewModel.fetchAlbums()
+            self.viewModel.fetchPhotos()
+        }
     }
 }

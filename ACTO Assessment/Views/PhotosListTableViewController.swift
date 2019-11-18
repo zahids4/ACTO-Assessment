@@ -9,6 +9,8 @@
 import UIKit
 
 class PhotosListTableViewController: UITableViewController {
+    private let operations = ImageDownloadOperations()
+    
     private var viewModel: PhotosListViewModelProtocol!
     var selectedAlbumId: Int!
 
@@ -44,8 +46,30 @@ class PhotosListTableViewController: UITableViewController {
         let photo = viewModel.photo(at: indexPath.row)
         cell.configure(with: photo)
         
+        if photo.shouldDownloadImage {
+            startDownloadOperation(for: photo, at: indexPath)
+        }
+        
         return cell
     }
+    
+    private func startDownloadOperation(for story: PhotoViewModelProtocol, at indexPath: IndexPath) {
+         guard operations.downloadsInProgress[indexPath] == nil else { return }
+
+         let downloadOperation = DownloadOperation(story)
+
+         downloadOperation.completionBlock = {
+             if downloadOperation.isCancelled { return }
+
+             DispatchQueue.main.async {
+                 self.operations.downloadsInProgress.removeValue(forKey: indexPath)
+                 self.tableView.reloadRows(at: [indexPath], with: .fade)
+             }
+         }
+
+         operations.downloadsInProgress[indexPath] = downloadOperation
+         operations.operationQueue.addOperation(downloadOperation)
+     }
 }
 
 extension PhotosListTableViewController: ListViewModelDelegate {
